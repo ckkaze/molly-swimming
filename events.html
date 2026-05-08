@@ -7,9 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .image-card:hover img { transform: scale(1.05); }
-        .image-card img { transition: transform 0.5s ease; }
-        .event-section { scroll-margin-top: 100px; }
+        .event-card:hover img { transform: scale(1.05); }
+        .event-card img { transition: transform 0.5s ease; }
     </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
@@ -33,182 +32,127 @@
         <header class="text-center mb-16">
             <h1 class="text-5xl font-black text-blue-900 mb-4">歷史賽事紀錄</h1>
             <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
-            <p class="mt-6 text-xl text-gray-600">紀錄梓嫣在每一場賽事中的精彩瞬間與努力印記</p>
+            <p class="mt-6 text-xl text-gray-600">點擊下方賽事，查看精彩相簿與詳細成績</p>
         </header>
 
-        <!-- 2026 夢想盃 春季 -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-700 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">April 2026</span>
-                <h2 class="text-3xl font-bold text-gray-800">2026 夢想盃 春季</h2>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-2 image-card rounded-3xl overflow-hidden shadow-2xl bg-white h-96 relative group">
-                    <img src="assets/images/event_2026_dreamcup_spring/PXL_20260412_013447597.MP.jpg" alt="2026 夢想盃 春季" class="w-full h-full object-cover">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 2026 夢想盃 春季 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
+                    <img src="assets/images/event_2026_dreamcup_spring/PXL_20260412_013447597.MP.jpg" class="w-full h-full object-cover">
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white rounded-2xl h-44 overflow-hidden shadow-md image-card">
-                        <img src="assets/images/event_2026_dreamcup_spring/PXL_20260411_015009290.jpg" class="w-full h-full object-cover">
-                    </div>
-                    <div class="bg-white rounded-2xl h-44 overflow-hidden shadow-md image-card">
-                        <img src="assets/images/event_2026_dreamcup_spring/PXL_20260411_021948471.jpg" class="w-full h-full object-cover">
-                    </div>
-                    <div class="col-span-2 bg-blue-600 rounded-2xl p-6 text-white flex flex-col justify-center">
-                        <p class="text-sm opacity-90 mb-2">最新進度</p>
-                        <h3 class="text-xl font-bold mb-4">2026 年度首場夢想盃</h3>
-                        <a href="records.html" class="text-center bg-white text-blue-700 py-2 rounded-xl font-bold hover:bg-blue-50 transition">查看成績</a>
-                    </div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">April 2026</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2026 夢想盃 春季</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">2026 年度首場夢想盃，見證開季的活力與突破。</p>
+                    <a href="events/2026_dreamcup_spring.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
                 </div>
             </div>
-        </section>
 
-        <!-- 2026 基隆市中小聯運 -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-700 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">April 2026</span>
-                <h2 class="text-3xl font-bold text-gray-800">2026 基隆市中小聯運</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64">
+            <!-- 2026 基隆市中小聯運 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
                     <img src="assets/images/event_2026_keelong/PXL_20260427_054741684.MP.jpg" class="w-full h-full object-cover">
                 </div>
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64">
-                    <img src="assets/images/event_2026_keelong/PXL_20260426_235109654.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64">
-                    <img src="assets/images/event_2026_keelong/PXL_20260427_054452947.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64">
-                    <img src="assets/images/event_2026_keelong/PXL_20260427_081144528.MP.jpg" class="w-full h-full object-cover">
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">April 2026</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2026 基隆市中小聯運</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">代表學校出征基隆市賽，與在地好手同場競技。</p>
+                    <a href="events/2026_keelong.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
                 </div>
             </div>
-        </section>
 
-        <!-- 2026 全國北區A -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-700 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">January 2026</span>
-                <h2 class="text-3xl font-bold text-gray-800">2026 全國北區Ａ</h2>
-            </div>
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/3 space-y-4">
-                    <div class="bg-white p-8 rounded-3xl shadow-xl border-l-8 border-blue-600">
-                        <h3 class="text-2xl font-bold mb-4">北區分齡賽</h3>
-                        <p class="text-gray-600">在寒冷的一月，梓嫣依然維持高強度的訓練並在北區賽事中穩定發揮。</p>
-                    </div>
-                    <div class="h-64 rounded-3xl overflow-hidden shadow-lg image-card">
-                        <img src="assets/images/event_2026_northareaA/PXL_20260124_022303938.MP.jpg" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="md:w-2/3 h-96 md:h-auto rounded-3xl overflow-hidden shadow-2xl image-card">
+            <!-- 2026 全國北區A -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
                     <img src="assets/images/event_2026_northareaA/PXL_20260125_064029601.MP.jpg" class="w-full h-full object-cover">
                 </div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">January 2026</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2026 全國北區Ａ</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">寒冷一月中的熱血賽事，北區分齡賽的穩定發揮。</p>
+                    <a href="events/2026_northareaA.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
+                </div>
             </div>
-        </section>
 
-        <!-- 2025 夢想盃 冬季 -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">November 2025</span>
-                <h2 class="text-3xl font-bold text-gray-800">2025 夢想盃 冬季</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="image-card rounded-3xl overflow-hidden shadow-xl h-80">
+            <!-- 2025 夢想盃 冬季 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
                     <img src="assets/images/event_2025_dreamcup_winter/PXL_20251129_012432285.MP.jpg" class="w-full h-full object-cover">
                 </div>
-                <div class="image-card rounded-3xl overflow-hidden shadow-xl h-80">
-                    <img src="assets/images/event_2025_dreamcup_winter/PXL_20251130_074751319.MP.jpg" class="w-full h-full object-cover">
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">November 2025</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2025 夢想盃 冬季</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">2025 年末的總結賽事，為明年的挑戰做準備。</p>
+                    <a href="events/2025_dreamcup_winter.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
                 </div>
             </div>
-        </section>
 
-        <!-- 2025 全國北區A -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">September 2025</span>
-                <h2 class="text-3xl font-bold text-gray-800">2025 全國北區Ａ</h2>
-            </div>
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
-                <div class="lg:w-2/3 h-96 lg:h-auto image-card">
+            <!-- 2025 全國北區A -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
                     <img src="assets/images/event_2025_northareaA/PXL_20250920_014041183.MP.jpg" class="w-full h-full object-cover">
                 </div>
-                <div class="lg:w-1/3 p-10 flex flex-col justify-center bg-gradient-to-br from-white to-blue-50">
-                    <h3 class="text-2xl font-bold mb-4">九月秋季賽</h3>
-                    <p class="text-gray-600 mb-8">全國好手齊聚一堂，每一秒都是關鍵。</p>
-                    <div class="grid grid-cols-2 gap-2">
-                        <img src="assets/images/event_2025_northareaA/PXL_20250920_005257097.jpg" class="rounded-lg shadow">
-                        <img src="assets/images/event_2025_northareaA/PXL_20250921_031250111.jpg" class="rounded-lg shadow">
-                    </div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">September 2025</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2025 全國北區Ａ</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">秋季的全國北區賽，在競爭中尋求自我突破。</p>
+                    <a href="events/2025_northareaA.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
                 </div>
             </div>
-        </section>
 
-        <!-- 2025 松運美津濃盃 -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">June 2025</span>
-                <h2 class="text-3xl font-bold text-gray-800">2025 松運 MIZUNO 盃</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64 md:col-span-2">
+            <!-- 2025 松運 MIZUNO 盃 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
                     <img src="assets/images/event_2025_mizuno/PXL_20250628_051044708.MP.jpg" class="w-full h-full object-cover">
                 </div>
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64">
-                    <img src="assets/images/event_2025_mizuno/PXL_20250628_010243464.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64">
-                    <img src="assets/images/event_2025_mizuno/PXL_20250629_033253122.jpg" class="w-full h-full object-cover">
-                </div>
-                <div class="image-card rounded-2xl overflow-hidden shadow-lg h-64 md:col-span-2">
-                    <img src="assets/images/event_2025_mizuno/PXL_20250628_051037714.MP.jpg" class="w-full h-full object-cover">
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">June 2025</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2025 松運 MIZUNO 盃</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">松山運動中心的 MIZUNO 盃，盛大的游泳派對。</p>
+                    <a href="events/2025_mizuno.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
                 </div>
             </div>
-        </section>
 
-        <!-- 2025 夢想盃 春季 -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">March 2025</span>
-                <h2 class="text-3xl font-bold text-gray-800">2025 夢想盃 春季</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="image-card rounded-3xl overflow-hidden shadow-xl h-80">
+            <!-- 2025 夢想盃 春季 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
                     <img src="assets/images/event_2025_dreamcup_spring/PXL_20250308_092615540.MP.jpg" class="w-full h-full object-cover">
                 </div>
-                <div class="bg-white p-10 rounded-3xl shadow-xl flex flex-col justify-center">
-                    <p class="text-gray-600 italic mb-4">"超越昨天的自己"</p>
-                    <p class="text-lg">春季夢想盃見證了梓嫣在蝶式上的突破。</p>
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">March 2025</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2025 夢想盃 春季</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">春季夢想盃，在蝶式項目上取得了顯著進步。</p>
+                    <a href="events/2025_dreamcup_spring.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
                 </div>
             </div>
-        </section>
 
-        <!-- 2025 基隆市中小聯運 -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">February 2025</span>
-                <h2 class="text-3xl font-bold text-gray-800">2025 基隆市中小聯運</h2>
+            <!-- 2025 基隆市中小聯運 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
+                    <img src="assets/images/event_2025_keelong/PXL_20250324_011210632.MP.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">February 2025</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2025 基隆市中小聯運</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">首次代表參與市賽，開啟正式競技之路。</p>
+                    <a href="events/2025_keelong.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
+                </div>
             </div>
-            <div class="image-card rounded-3xl overflow-hidden shadow-2xl h-[500px]">
-                <img src="assets/images/event_2025_keelong/PXL_20250324_011210632.MP.jpg" class="w-full h-full object-cover">
-            </div>
-        </section>
 
-        <!-- 2024 夢想盃 冬季 -->
-        <section class="event-section mb-24">
-            <div class="flex items-center space-x-4 mb-8">
-                <span class="bg-gray-500 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">December 2024</span>
-                <h2 class="text-3xl font-bold text-gray-800">2024 夢想盃 冬季</h2>
-            </div>
-            <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-                <div class="md:w-1/2 h-80 md:h-auto image-card">
-                    <img src="assets/images/event_2024_dreamcup_winter/PXL_20241130_075050434.jpg" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
+            <!-- 2024 夢想盃 冬季 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl event-card flex flex-col">
+                <div class="h-56 overflow-hidden">
+                    <img src="assets/images/event_2024_dreamcup_winter/PXL_20241130_075050434.jpg" class="w-full h-full object-cover">
                 </div>
-                <div class="md:w-1/2 p-12 text-white flex flex-col justify-center">
-                    <h3 class="text-3xl font-bold mb-6">年度年終賽</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">這是梓嫣在 2024 年度的最後一場挑戰，為隔年的爆發奠定了基礎。</p>
+                <div class="p-8 flex-1 flex flex-col">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">December 2024</span>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">2024 夢想盃 冬季</h3>
+                    <p class="text-gray-600 mb-6 flex-1 text-sm leading-relaxed">初試啼聲的年度年終賽，打下堅實的基礎。</p>
+                    <a href="events/2024_dreamcup_winter.html" class="block text-center bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">觀看相簿與成績</a>
                 </div>
             </div>
-        </section>
+        </div>
 
     </main>
 
