@@ -6,19 +6,50 @@
     <title>Molly Swimming - 梓嫣的游泳紀錄</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts: Noto Sans TC for a cleaner look, and a rounded font variant -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        .rounded-font { font-family: 'Varela+Round', 'Noto Sans TC', sans-serif; }
+        
+        /* Gradient Header */
+        .nav-gradient {
+            background: linear-gradient(90deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+
+        /* Slider Animations */
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            height: 400px;
+        }
+        .slider-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-cover: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slider-img.active {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
-    <!-- Navigation Bar -->
-    <nav class="bg-blue-600 text-white shadow-lg">
+    <!-- Navigation Bar with Gradient -->
+    <nav class="nav-gradient text-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-4">
-                    <a href="index.html" class="text-2xl font-bold font-sans">Molly Swimming</a>
+                    <a href="index.html" class="text-2xl font-black rounded-font tracking-tight">Molly Swimming</a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="hover:text-blue-200 transition">首頁</a>
-                    <a href="events.html" class="hover:text-blue-200 transition">賽事紀錄</a>
-                    <a href="records.html" class="hover:text-blue-200 transition">成績查詢與更新</a>
+                <div class="hidden md:flex items-center space-x-8 font-bold">
+                    <a href="index.html" class="text-blue-100 hover:text-white transition">首頁</a>
+                    <a href="events.html" class="text-blue-100 hover:text-white transition">賽事紀錄</a>
+                    <a href="records.html" class="text-blue-100 hover:text-white transition">成績查詢與更新</a>
                 </div>
             </div>
         </div>
@@ -26,53 +57,96 @@
 
     <!-- Main Content -->
     <main class="max-w-6xl mx-auto mt-10 px-4 min-h-screen">
-        <section id="hero" class="relative text-center py-32 bg-blue-900 rounded-3xl shadow-xl mb-12 overflow-hidden">
-            <img src="assets/images/index_main.jpg" alt="Molly Swimming Hero" class="absolute inset-0 w-full h-full object-cover opacity-40">
-            <div class="relative z-10">
-                <h1 class="text-6xl font-black text-white mb-4 drop-shadow-lg">歡迎來到 Molly Swimming</h1>
-                <p class="text-2xl text-blue-100 font-medium drop-shadow-md">追蹤梓嫣的每一分努力與進步</p>
+        <!-- Hero Section with index_pic.jpg and smaller text -->
+        <section id="hero" class="relative text-center py-20 bg-blue-900 rounded-3xl shadow-2xl mb-12 overflow-hidden">
+            <img src="assets/images/index_pic.jpg" alt="Molly Swimming Hero" class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/60"></div>
+            <div class="relative z-10 px-6">
+                <h1 class="text-4xl md:text-5xl font-black text-white mb-4 drop-shadow-lg rounded-font">歡迎來到 Molly Swimming</h1>
+                <p class="text-lg md:text-xl text-blue-100 font-medium drop-shadow-md rounded-font">追蹤梓嫣的每一分努力與進步</p>
             </div>
         </section>
 
-        <!-- Extracted Content -->
-        <section id="about" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="p-8 bg-blue-100 rounded-2xl shadow-md border border-blue-200">
-                <h2 class="text-3xl font-bold text-blue-800 mb-6 flex items-center">
-                    <svg class="w-8 h-8 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
-                    給小白教練的話
-                </h2>
-                <div id="coach-content" class="text-lg leading-relaxed text-gray-700 space-y-4">
-                    <p class="font-medium text-blue-900">「現在就讓大家都看得到你的進步！」</p>
-                    <p>不論你是幾年級的小朋友，只要跟著我的節奏，你就能跑在大家前面。讓我們一起努力，在每一個賽事中超越自我，讓大家都看見你的光芒。</p>
-                    <div class="mt-6 p-4 bg-white rounded-lg border-l-4 border-blue-500 italic">
-                        "你現在的進步，就是未來成功的基石。"
+        <!-- Lower Section: Slider and AI Image -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+            <!-- Left Side: Image Slider -->
+            <div class="flex flex-col">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3 rounded-font">精彩瞬間</h2>
+                <div class="slider-container shadow-xl border-4 border-white bg-gray-200">
+                    <!-- Images will be cycled by JS -->
+                    <img src="assets/images/slider/1.jpg" class="slider-img active" alt="Slider 1">
+                    <img src="assets/images/slider/2.jpg" class="slider-img" alt="Slider 2">
+                    <img src="assets/images/slider/3.jpg" class="slider-img" alt="Slider 3">
+                    <img src="assets/images/slider/4.jpg" class="slider-img" alt="Slider 4">
+                    <img src="assets/images/slider/5.jpg" class="slider-img" alt="Slider 5">
+                    
+                    <!-- Overlay for text or info if needed later -->
+                    <div class="absolute bottom-4 left-4 bg-black/40 text-white px-4 py-1 rounded-full text-xs backdrop-blur-sm">
+                        Molly's Swimming Life
                     </div>
                 </div>
+                <p class="mt-3 text-sm text-gray-500 italic px-2">提示：我會自動更換照片，歡迎隨時回來看看新驚喜！</p>
             </div>
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
-                <div class="h-80 bg-gray-200 flex items-center justify-center relative group">
-                    <img src="assets/images/index_2.jpg" alt="Molly Swimming About" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-blue-600 opacity-10 group-hover:opacity-0 transition-opacity"></div>
+
+            <!-- Right Side: AI Image with Summary -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-blue-100 flex flex-col group">
+                <div class="h-80 bg-blue-50 flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/images/index_ai.png" alt="Molly AI Illustration" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-blue-600/5 group-hover:bg-transparent transition-colors"></div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">最新賽事摘要</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>🏊 2026 夢想盃 春季 - 完美完賽</li>
-                        <li>🏊 2026 基隆聯運 - 代表參賽</li>
-                    </ul>
-                    <a href="events.html" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">查看更多賽事 →</a>
+                <div class="p-8">
+                    <h3 class="text-2xl font-black text-gray-800 mb-4 rounded-font">最新賽事摘要</h3>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-blue-100 text-blue-600 p-2 rounded-lg">🏊</span>
+                            <div>
+                                <p class="font-bold text-gray-800">2026 夢想盃 春季</p>
+                                <p class="text-sm text-gray-500">完美完賽，成績持續進步中</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-blue-100 text-blue-600 p-2 rounded-lg">🏊</span>
+                            <div>
+                                <p class="font-bold text-gray-800">2026 基隆市中小聯運</p>
+                                <p class="text-sm text-gray-500">代表學校參賽，展現拼勁</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="events.html" class="block text-center py-3 px-6 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition transform hover:-translate-y-1 shadow-lg">查看完整賽事紀錄 →</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-10 mt-20">
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2026 Molly Swimming. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="index.html" class="hover:text-white transition">首頁</a>
+                <a href="events.html" class="hover:text-white transition">賽事紀錄</a>
+                <a href="records.html" class="hover:text-white transition">成績查詢</a>
+            </div>
+            <p class="text-sm">&copy; 2026 Molly Swimming. Created for Molly's Journey.</p>
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script>
+        // Image Slider Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.slider-img');
+            let currentIndex = 0;
+
+            function nextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            // Change image every 4 seconds
+            if (images.length > 1) {
+                setInterval(nextImage, 4000);
+            }
+        });
+    </script>
 </body>
 </html>
